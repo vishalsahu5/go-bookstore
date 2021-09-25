@@ -3,11 +3,12 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
 	"go-bookstore/pkg/models"
 	"go-bookstore/pkg/utils"
 	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 var NewBook models.Book
@@ -85,4 +86,3 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
-
